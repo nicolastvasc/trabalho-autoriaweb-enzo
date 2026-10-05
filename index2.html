@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guia Breaking Bad</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: green;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ESTRUTURA PRINCIPAL */
+        body {
+            display: grid;
+
+            grid-template-areas:
+                "header header"
+                "aside main"
+                "footer footer";
+
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 120px 1fr 100px;
+
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        header {
+            grid-area: header;
+
+            border: 3px solid white;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0 0 15px 0;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 10px;
+        }
+
+        /* ASIDE */
+        aside {
+            grid-area: aside;
+
+            border: 3px solid white;
+            padding: 20px;
+        }
+
+        aside a {
+            display: block;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        /* MAIN */
+        main {
+            grid-area: main;
+
+            border: 3px solid white;
+            padding: 25px;
+            overflow-y: auto;
+        }
+
+        /* SEÇÕES */
+        section {
+            margin-bottom: 30px;
+        }
+
+        article {
+            border: 2px solid white;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.15);
+        }
+
+        article img {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        figcaption {
+            margin-top: 5px;
+        }
+
+        /* FOOTER */
+        footer {
+            grid-area: footer;
+
+            border: 3px solid white;
+            padding: 20px;
+        }
+
+        /* CELULAR */
+        @media (max-width: 700px) {
+
+            body {
+                display: grid;
+
+                grid-template-areas:
+                    "header"
+                    "aside"
+                    "main"
+                    "footer";
+
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr auto;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>
+            Guia dos principais Personagens - Breaking Bad
+        </h1>
+
+        <nav aria-label="Navegação principal">
+
+            <a href="#walter">Walter White</a>
+            <a href="#jesse">Jesse Pinkman</a>
+            <a href="#saul">Saul Goodman</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ASIDE -->
+    <aside>
+
+        <h2>Personagens</h2>
+
+        <nav aria-label="Navegação dos personagens">
+
+            <a href="#walter">Walter White</a>
+
+            <a href="#jesse">Jesse Pinkman</a>
+
+            <a href="#saul">Saul Goodman</a>
+
+            <a href="#gus">Gus Fring</a>
+
+            <a href="#hank">Hank</a>
+
+            <a href="#skyler">Skyler White</a>
+
+            <a href="#walterjr">Walter Jr.</a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- INTRODUÇÃO -->
+        <section>
+
+            <h2>Breaking Bad</h2>
+
+            <p>
+                Conheça os principais personagens da série
+                <strong>Breaking Bad</strong>.
+            </p>
+
+            <p>
+                <q>Uma série angustiante de tirar o fôlego.</q>
+            </p>
+
+        </section>
+
+
+        <!-- WALTER -->
+        <section>
+
+            <article id="walter">
+
+                <header>
+                    <h2>Walter White</h2>
+                </header>
+
+                <figure>
+
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png"
+                        width="200"
+                        alt="Walter White">
+
+                    <figcaption>
+                        Walter White, também conhecido como Heisenberg.
+                    </figcaption>
+
+                </figure>
+
+                <p>
+                    <em>Walter White</em> é um professor de química que
+                    se torna um poderoso produtor de metanfetamina.
+                </p>
+
+            </article>
+
+
+            <!-- JESSE -->
+            <article id="jesse">
+
+                <header>
+                    <h2>Jesse Pinkman</h2>
+                </header>
+
+                <figure>
+
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/en/c/c6/Jesse_Pinkman_S5B.png"
+                        width="200"
+                        alt="Jesse Pinkman">
+
+                    <figcaption>
+                        Jesse Pinkman, parceiro de Walter.
+                    </figcaption>
+
+                </figure>
+
+                <p>
+                    <em>Jesse Pinkman</em> é um ex-aluno de Walter
+                    e seu parceiro no mundo do crime.
+                </p>
+
+            </article>
+
+
+            <!-- SAUL -->
+            <article id="saul">
+
+                <header>
+                    <h2>Saul Goodman</h2>
+                </header>
+
+                <figure>
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRosgDJ1YOG7cxG4bzR3raFsXvM2_S503vuCQ&s"
+                        width="200"
+                        alt="Saul Goodman">
+
+                    <figcaption>
+                        Saul Goodman, advogado de Walter e Jesse.
+                    </figcaption>
+
+                </figure>
+
+                <p>
+                    <em>Saul</em> é um advogado que ajuda Walter e Jesse
+                    em diversas situações.
+                </p>
+
+            </article>
+
+
+            <!-- GUS -->
+            <article id="gus">
+
+                <header>
+                    <h2>Gus Fring</h2>
+                </header>
+
+                <p>
+                    <em>Gus</em> é um dos principais antagonistas da série.
+                </p>
+
+            </article>
+
+
+            <!-- HANK -->
+            <article id="hank">
+
+                <header>
+                    <h2>Hank Schrader</h2>
+                </header>
+
+                <p>
+                    <em>Hank</em> é um agente da DEA e cunhado de Walter
